@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: raw
+    tables:
+      - name: daily_weather
+
+models:
+  - name: stg_weather_daily
+    description: Una fila por ciudad y fecha local, con unidades de la API.
+  - name: mart_weather_monthly
+    description: Una fila por ciudad y mes calendario.
+    columns:
+      - name: city_month
+        data_tests: [not_null, unique]

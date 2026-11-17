@@ -1,0 +1,6 @@
+name: clima_peru
+version: '1.0.0'
+config-version: 2
+profile: clima_peru
+model-paths: ['models']
+test-paths: ['tests']
